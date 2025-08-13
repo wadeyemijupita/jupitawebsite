@@ -1,3 +1,4 @@
+import BankStatementAnalysis from '@/views/BankStatementAnalysis.vue'
 import ContactView from '@/views/ContactView.vue'
 import FlowkyAi from '@/views/FlowkyAi.vue'
 import HomeView from '@/views/HomeView.vue'
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView
+    },
+    {
+      path: '/BankStatementAnalysis',
+      name: 'BankStatementAnalysis',
+      component: BankStatementAnalysis
     },
    
   ]
