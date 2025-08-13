@@ -5,7 +5,6 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import 'aos/dist/aos.css'
 
 // Import Element Plus and its styles
 import ElementPlus from 'element-plus';
