@@ -1,6 +1,9 @@
 <script setup>
+
 import HeaderView from '@/components/HeaderView.vue'
 import FooterView from '@/components/FooterView.vue'
+
+
 
 const cards = [
   {
@@ -62,6 +65,8 @@ const integrationCards = [
     description: 'Manual statement upload and processing'
   }
 ];
+
+
 </script>
 
 <template>

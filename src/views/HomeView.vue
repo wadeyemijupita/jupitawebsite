@@ -8,7 +8,9 @@ const cards = [
     iconColor: 'primary',
     title: 'Bank Statement Analysis',
     description: 'Extract 500+ data points with advanced fraud detection and seamless integrations',
-    features: ['Spend Pattern Analysis', 'Income Analysis', 'Cashflow Analysis', 'Risk Indicators']
+    features: ['Spend Pattern Analysis', 'Income Analysis', 'Cashflow Analysis', 'Risk Indicators'],
+    link: '/BankStatementAnalysis', // should match the section id below if you have it
+    type: 'page'
   },
   {
     icon: 'mdi-shield-check-outline',
@@ -16,7 +18,9 @@ const cards = [
     iconColor: 'primary',
     title: 'Credit Underwriting',
     description: 'Comprehensive risk assessment with customizable scoring models',
-    features: ['Risk Assessment', 'Credit Scoring', 'Decision Automation', 'Portfolio Analysis']
+    features: ['Risk Assessment', 'Credit Scoring', 'Decision Automation', 'Portfolio Analysis'],
+    link: 'credit-underwriting',
+     type: 'section'
   },
   {
     icon: 'mdi-file-outline',
@@ -29,7 +33,9 @@ const cards = [
       'Document Management',
       'Workflow Automation',
       'Compliance Tracking'
-    ]
+    ],
+    link: 'loan-origination',
+    type: 'section'
   },
   {
     icon: 'mdi-chart-line',
@@ -37,7 +43,9 @@ const cards = [
     iconColor: 'primary',
     title: 'Custom Scorecard',
     description: 'Pre-built custom scorecards to assess borrower risk based on specific criteria',
-    features: ['Risk Scoring', 'Custom Parameters', 'Portfolio Optimization', 'Real-time Updates']
+    features: ['Risk Scoring', 'Custom Parameters', 'Portfolio Optimization', 'Real-time Updates'],
+    link: 'custom-scorecard',
+    type: 'section'
   },
   {
     icon: 'mdi-brain',
@@ -45,7 +53,9 @@ const cards = [
     iconColor: 'primary',
     title: 'AI Credit Decisions',
     description: 'Intelligent credit decisions powered by advanced machine learning',
-    features: ['ML Models', 'Decision Trees', 'Risk Prediction', 'Automated Approval']
+    features: ['ML Models', 'Decision Trees', 'Risk Prediction', 'Automated Approval'],
+    link: 'ai-credit-decisions', // if you have this section in tabs,
+    type: 'section'
   },
   {
     icon: 'mdi-flash-outline',
@@ -53,9 +63,12 @@ const cards = [
     iconColor: 'primary',
     title: 'ID Verification',
     description: 'Secure identity verification with advanced fraud detection',
-    features: ['Document Verification', 'Biometric Matching', 'Fraud Detection', 'Compliance']
+    features: ['Document Verification', 'Biometric Matching', 'Fraud Detection', 'Compliance'],
+    link: 'id-credit-search',
+    type: 'section'
   }
 ]
+
 </script>
 
 <template>
@@ -84,6 +97,7 @@ const cards = [
     <!-- Buttons -->
     <div class="flex justify-center gap-4">
       <v-btn
+        to="/contact"
         color="primary"
         class="px-6 py-3 text-white font-semibold rounded-lg"
         elevation="2"
@@ -92,7 +106,12 @@ const cards = [
         Request Demo
       </v-btn>
 
-      <v-btn variant="outlined" color="primary" class="px-6 py-3 font-semibold rounded-lg">
+      <v-btn
+        to="/flowkyai"
+        variant="outlined"
+        color="primary"
+        class="px-6 py-3 font-semibold rounded-lg"
+      >
         Explore FlowkyAI
       </v-btn>
     </div>
@@ -183,6 +202,9 @@ const cards = [
 
         <!-- Button -->
         <v-btn
+          :to="card.type === 'page' 
+        ? { path: `${card.link}` } 
+        : { path: '/coreservices', hash: `#${card.link}` }"
           variant="outlined"
           class="!text-black font-medium transition-all duration-300 group-hover:!text-white group-hover:bg-blue-600 group-hover:border-blue-600"
           append-icon="mdi-arrow-right"
@@ -229,7 +251,7 @@ const cards = [
         </ul>
 
         <!-- Button -->
-        <v-btn class="text-blue-700 font-semibold" elevation="0">
+        <v-btn to="/flowkyai" class="text-blue-700 font-semibold" elevation="0">
           Explore FlowkyAI
           <v-icon icon="mdi-arrow-right" class="ml-2" />
         </v-btn>

@@ -10,10 +10,9 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center space-x-8 text-gray-700 font-medium">
-      <router-link to="/" >
+      <router-link to="/">
         <a href="#" class="hover:text-blue-600">Home</a>
       </router-link>
-        
 
       <!-- Services Dropdown -->
       <div class="relative" ref="dropdownRef">
@@ -40,26 +39,27 @@
             :key="index"
             class="p-3 rounded-md hover:bg-blue-100 cursor-pointer transition"
           >
-            <p class="font-semibold text-gray-800">{{ service.title }}</p>
-            <p class="text-sm text-gray-500">{{ service.description }}</p>
+            <router-link :to="service.path" class="block">
+              <p class="font-semibold text-gray-800">{{ service.title }}</p>
+              <p class="text-sm text-gray-500">{{ service.description }}</p>
+            </router-link>
           </div>
         </div>
       </div>
 
-      <router-link to="/flowkyai" >
-          <a href="#" class="hover:text-blue-600">FlowkyAI</a>
+      <router-link to="/flowkyai">
+        <a href="#" class="hover:text-blue-600">FlowkyAI</a>
       </router-link>
       <router-link to="/contact">
-            <a href="#" class="hover:text-blue-600">Contact</a>
+        <a href="#" class="hover:text-blue-600">Contact</a>
       </router-link>
-  
     </nav>
 
     <!-- Desktop Button -->
     <v-btn
-    to="/contact"
+      to="/contact"
       size="large"
-      color="primary"
+      color="[#2563eb]"
       rounded="lg"
       class="hidden lg:inline-flex !bg-blue-600 hover:!bg-blue-700 text-white px-6"
     >
@@ -122,10 +122,12 @@
             <div
               v-for="(service, index) in services"
               :key="index"
-              class="p-2 rounded-md hover:bg-blue-100 cursor-pointer transition"
+              class="p-3 rounded-md hover:bg-blue-100 cursor-pointer transition"
             >
-              <p class="font-semibold text-gray-800">{{ service.title }}</p>
-              <p class="text-sm text-gray-500">{{ service.description }}</p>
+              <router-link :to="service.path" class="block">
+                <p class="font-semibold text-gray-800">{{ service.title }}</p>
+                <p class="text-sm text-gray-500">{{ service.description }}</p>
+              </router-link>
             </div>
           </div>
         </div>
@@ -148,16 +150,37 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const showDropdown = ref(false)
 const showMenu = ref(false)
 
 const services = [
-  { title: 'Bank Statement Analysis', description: 'Advanced bank statement analysis solutions' },
-  { title: 'Loan Origination', description: 'Advanced loan origination solutions' },
-  { title: 'Credit Underwriting', description: 'Advanced credit underwriting solutions' },
-  { title: 'ID & Credit Search', description: 'Advanced id & credit search solutions' },
-  { title: 'Custom Scorecard', description: 'Advanced custom scorecard solutions' }
+  {
+    title: 'Bank Statement Analysis',
+    description: 'Advanced bank statement analysis solutions',
+    path: '/BankStatementAnalysis'
+  },
+  {
+    title: 'Loan Origination',
+    description: 'Advanced loan origination solutions',
+    path: '/coreservices'
+  },
+  {
+    title: 'Credit Underwriting',
+    description: 'Advanced credit underwriting solutions',
+    path: '/'
+  },
+  {
+    title: 'ID & Credit Search',
+    description: 'Advanced id & credit search solutions',
+    path: '/'
+  },
+  {
+    title: 'Custom Scorecard',
+    description: 'Advanced custom scorecard solutions',
+    path: '/'
+  }
 ]
 
 const dropdownRef = ref(null)

@@ -15,7 +15,12 @@ const form = reactive({
 
 const services = ['Loan Origination', 'Risk Assessment', 'Collections', 'Customer Management']
 
-const loanVolumes = ['Micro Loans (Less than $50k)', 'Small business $50k - $500k', 'Commercial $500k - $5M', 'Enterprise >$5M']
+const loanVolumes = [
+  'Micro Loans (Less than $50k)',
+  'Small business $50k - $500k',
+  'Commercial $500k - $5M',
+  'Enterprise >$5M'
+]
 
 const submitForm = () => {
   console.log('Form submitted:', form)
@@ -26,11 +31,11 @@ const submitForm = () => {
   <HeaderView />
   <div class="bg-gradient-to-b from-[#edf2fe] to-[#f5f8ff] py-20">
     <div class="text-center mb-8">
-       <div
-      class="inline-block px-4 py-1 mb-4 bg-blue-100 border border-blue-100 rounded-full shadow-sm text-sm font-medium text-blue-700"
-    >
-      Get in touch
-    </div>
+      <div
+        class="inline-block px-4 py-1 mb-4 bg-blue-100 border border-blue-100 rounded-full shadow-sm text-sm font-medium text-blue-700"
+      >
+        Get in touch
+      </div>
       <h1 class="text-3xl md:text-4xl font-bold mt-4">
         Ready to Transform Your
         <span class="text-blue-600">Lending Operations?</span>
@@ -155,7 +160,7 @@ const submitForm = () => {
           <ol class="space-y-4 text-sm">
             <li class="flex items-start space-x-3">
               <div
-                class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold"
+                class="bg-blue-500 text-white rounded-full w-6 h-6 p-2 flex items-center justify-center font-bold"
               >
                 1
               </div>
@@ -166,7 +171,7 @@ const submitForm = () => {
             </li>
             <li class="flex items-start space-x-3">
               <div
-                class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold"
+                class="bg-blue-500 text-white rounded-full w-6 h-6 p-2 flex items-center justify-center font-bold"
               >
                 2
               </div>
@@ -177,7 +182,7 @@ const submitForm = () => {
             </li>
             <li class="flex items-start space-x-3">
               <div
-                class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold"
+                class="bg-blue-500 text-white rounded-full w-6 h-6 p-2 flex items-center justify-center font-bold"
               >
                 3
               </div>
@@ -192,11 +197,11 @@ const submitForm = () => {
     </div>
   </div>
 
-  <FooterView />
+   <FooterView  :showCta="false"/>
 </template>
 
 <style scoped>
-    .v-btn{
-        text-transform: none;
-    }
+.v-btn {
+  text-transform: none;
+}
 </style>
