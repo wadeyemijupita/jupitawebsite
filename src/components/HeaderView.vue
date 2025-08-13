@@ -57,6 +57,7 @@
 
     <!-- Desktop Button -->
     <v-btn
+    to="/contact"
       size="large"
       color="primary"
       rounded="lg"
