@@ -49,8 +49,10 @@
       <router-link to="/flowkyai" >
           <a href="#" class="hover:text-blue-600">FlowkyAI</a>
       </router-link>
-    
-      <a href="#" class="hover:text-blue-600">Contact</a>
+      <router-link to="/contact">
+            <a href="#" class="hover:text-blue-600">Contact</a>
+      </router-link>
+  
     </nav>
 
     <!-- Desktop Button -->
