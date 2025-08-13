@@ -260,7 +260,7 @@ const integrationCards = [
   <FooterView />
 </template>
 
-<style scoped>
+<style>
 .v-btn {
   text-transform: none;
 }
