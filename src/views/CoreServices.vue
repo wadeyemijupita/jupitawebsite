@@ -195,7 +195,7 @@ onBeforeUnmount(() => {
           :key="tab.id"
           @click="scrollTo(tab.id)"
           :class="[
-            'flex items-center space-x-2 px-3 py-2 rounded-md text-left transition',
+            'flex items-center space-x-2  p-2 rounded-md text-left transition',
             activeSection === tab.id
               ? 'bg-blue-100 text-blue-600 font-semibold'
               : 'hover:bg-gray-100'
@@ -225,7 +225,7 @@ onBeforeUnmount(() => {
           :key="tab.id"
           :id="tab.id"
           ref="sectionRefs"
-          class="scroll-mt-20"
+          class="scroll-mt-32"
         >
           <div class="flex items-center mb-2">
             <v-icon

@@ -93,7 +93,7 @@ const lendingScenarios = [
 <template>
   <HeaderView />
   <section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
-    <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-[60%_40%] gap-8 items-center">
+    <div class="max-w-5xl mx-auto px-8 grid md:grid-cols-[60%_40%] gap-8 items-center">
       <!-- Left Content -->
       <div>
         <span
@@ -113,12 +113,12 @@ const lendingScenarios = [
 
         <div class="flex flex-col sm:flex-row gap-4 mb-12">
           <!-- Button -->
-          <v-btn class="text-blue-700 font-semibold" elevation="0">
+          <v-btn size="large" class="!text-blue-700 font-semibold">
             Explore FlowkyAI
             <v-icon icon="mdi-arrow-right" class="ml-2" />
           </v-btn>
           <!-- Button -->
-          <v-btn class="text-blue-700 font-semibold" elevation="0">
+          <v-btn size="large" class="!text-blue-700 font-semibold">
             Learn More
             <v-icon icon="mdi-arrow-right" class="ml-2" />
           </v-btn>
@@ -151,7 +151,7 @@ const lendingScenarios = [
     </div>
   </section>
 
-  <section class="py-12 px-4 bg-white">
+  <section class="py-20 px-4 bg-white">
     <div class="max-w-6xl mx-auto text-center">
       <!-- Heading -->
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
@@ -172,7 +172,7 @@ const lendingScenarios = [
     </div>
   </section>
 
-  <section class="py-16 bg-gray-50">
+  <section class="py-20 bg-gray-50">
     <!-- Heading -->
     <div class="text-center max-w-3xl mx-auto mb-12 px-4">
       <h2 class="text-3xl font-bold mb-2">Intelligent Features That Adapt</h2>
@@ -220,7 +220,7 @@ const lendingScenarios = [
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-white">
     <!-- Heading -->
     <div class="text-center max-w-3xl mx-auto mb-12 px-4">
       <h2 class="text-3xl font-bold mb-2">Tailored for Every Lending Scenario</h2>

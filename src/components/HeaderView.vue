@@ -11,12 +11,12 @@
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center space-x-8 text-gray-700 font-medium">
       <router-link to="/">
-        <a href="#" class="hover:text-blue-600">Home</a>
+        <a href="#" class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue">Home</a>
       </router-link>
 
       <!-- Services Dropdown -->
       <div class="relative" ref="dropdownRef">
-        <button @click="toggleDropdown" class="flex items-center hover:text-blue-600">
+        <button @click="toggleDropdown" class="px-4 py-2 hover:bg-blue-50 hover:py-2 hover:px-4 flex items-center hover:text-blue-600 hover:rounded">
           Services
           <svg
             class="w-4 h-4 ml-1 transition-transform duration-200"
@@ -48,10 +48,10 @@
       </div>
 
       <router-link to="/flowkyai">
-        <a href="#" class="hover:text-blue-600">FlowkyAI</a>
+        <a href="#" class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue">FlowkyAI</a>
       </router-link>
       <router-link to="/contact">
-        <a href="#" class="hover:text-blue-600">Contact</a>
+        <a href="#" class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue">Contact</a>
       </router-link>
     </nav>
 
@@ -61,7 +61,7 @@
       size="large"
       color="[#2563eb]"
       rounded="lg"
-      class="hidden lg:inline-flex !bg-blue-600 hover:!bg-blue-700 text-white px-6"
+     class="!hidden lg:!inline-flex !bg-blue-600 hover:!bg-blue-700 text-white px-6"
     >
       Request Demo
     </v-btn>
@@ -164,22 +164,22 @@ const services = [
   {
     title: 'Loan Origination',
     description: 'Advanced loan origination solutions',
-    path: '/coreservices'
+    path: '/coreservices#loan-origination'
   },
   {
     title: 'Credit Underwriting',
     description: 'Advanced credit underwriting solutions',
-    path: '/'
+    path: '/coreservices#credit-underwriting'
   },
   {
     title: 'ID & Credit Search',
     description: 'Advanced id & credit search solutions',
-    path: '/'
+    path: '/coreservices#id-credit-search'
   },
   {
     title: 'Custom Scorecard',
     description: 'Advanced custom scorecard solutions',
-    path: '/'
+    path: '/coreservices#custom-scorecard'
   }
 ]
 

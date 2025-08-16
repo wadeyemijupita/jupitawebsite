@@ -46,7 +46,7 @@ const submitForm = () => {
       </p>
     </div>
 
-    <div class="max-w-6xl justify-center mx-auto flex items-center grid md:grid-cols-3 gap-6">
+    <div class="max-w-5xl justify-center mx-auto flex items-center grid md:grid-cols-3 gap-6">
       <!-- Form -->
       <div class="bg-white rounded p-6 md:col-span-2">
         <h2 class="text-lg font-semibold mb-1">Request a Demo</h2>
@@ -124,7 +124,7 @@ const submitForm = () => {
             hide-details
           ></v-textarea>
 
-          <v-btn type="submit" color="primary" size="large" class="w-full text-white font-medium">
+          <v-btn type="submit"  color="[#2563eb]" size="large" class="w-full !bg-blue-600 hover:!bg-blue-700 text-white px-6 font-medium">
             Schedule Demo →
           </v-btn>
         </form>
@@ -160,7 +160,7 @@ const submitForm = () => {
           <ol class="space-y-4 text-sm">
             <li class="flex items-start space-x-3">
               <div
-                class="bg-blue-500 text-white rounded-full w-6 h-6 p-2 flex items-center justify-center font-bold"
+                class="m-1 bg-blue-500 text-white rounded-full w-8 h-6 p-2 flex items-center justify-center font-bold"
               >
                 1
               </div>
@@ -171,7 +171,7 @@ const submitForm = () => {
             </li>
             <li class="flex items-start space-x-3">
               <div
-                class="bg-blue-500 text-white rounded-full w-6 h-6 p-2 flex items-center justify-center font-bold"
+                class="m-1 bg-blue-500 text-white rounded-full w-8 h-6 p-2 flex items-center justify-center font-bold"
               >
                 2
               </div>
@@ -182,7 +182,7 @@ const submitForm = () => {
             </li>
             <li class="flex items-start space-x-3">
               <div
-                class="bg-blue-500 text-white rounded-full w-6 h-6 p-2 flex items-center justify-center font-bold"
+                class="m-1 bg-blue-500 text-white rounded-full w-8 h-6 p-2 flex items-center justify-center font-bold"
               >
                 3
               </div>
@@ -197,7 +197,7 @@ const submitForm = () => {
     </div>
   </div>
 
-   <FooterView  :showCta="false"/>
+  <FooterView :showCta="false" />
 </template>
 
 <style scoped>

@@ -2,53 +2,57 @@
   <footer class="bg-[#0F172A] text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <!-- Top CTA -->
-       <div v-if="showCta"><h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Lending Process?</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto mb-6">
-        Join leading financial institutions using Jupita's advanced solutions to streamline
-        operations and reduce risk.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-        <router-link
-          :to="{ path: '/contact' }"
-          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium flex items-center justify-center gap-2"
-        >
-          Schedule a Demo
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+      <div v-if="showCta">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">
+          Ready to Transform Your Lending Process?
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mb-6">
+          Join leading financial institutions using Jupita's advanced solutions to streamline
+          operations and reduce risk.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <router-link
+            :to="{ path: '/contact' }"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium flex items-center justify-center gap-2"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
-        </router-link>
+            Schedule a Demo
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </router-link>
 
-        <router-link
-          :to="{ path: '/flowkyai' }"
-          class="bg-white text-blue px-6 py-3 rounded-md font-medium flex items-center justify-center gap-2"
-        >
-          Learn More
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <router-link
+            :to="{ path: '/contact' }"
+            class="bg-white text-blue px-6 py-3 rounded-md font-medium flex items-center justify-center gap-2"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
-        </router-link>
+            Learn More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </router-link>
+        </div>
       </div>
 
       <!-- Middle Info -->
@@ -123,14 +127,13 @@
       <div class="mt-8 border-t border-gray-800 pt-6 text-gray-500 text-xs text-center">
         © 2025 Jupita. All rights reserved. Advanced lending solutions for modern financial
         institutions.
-      </div></div>
-      
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-  defineProps({
+defineProps({
   showCta: { type: Boolean, default: true },
   showMiddle: { type: Boolean, default: true }
 })

@@ -11,6 +11,7 @@ import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
+import './assets/fonts.css' // override after Vuetify
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'

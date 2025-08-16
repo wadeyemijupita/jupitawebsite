@@ -20,7 +20,7 @@ const cards = [
     description: 'Comprehensive risk assessment with customizable scoring models',
     features: ['Risk Assessment', 'Credit Scoring', 'Decision Automation', 'Portfolio Analysis'],
     link: 'credit-underwriting',
-     type: 'section'
+    type: 'section'
   },
   {
     icon: 'mdi-file-outline',
@@ -68,7 +68,6 @@ const cards = [
     type: 'section'
   }
 ]
-
 </script>
 
 <template>
@@ -97,9 +96,10 @@ const cards = [
     <!-- Buttons -->
     <div class="flex justify-center gap-4">
       <v-btn
+        size="large"
         to="/contact"
-        color="primary"
-        class="px-6 py-3 text-white font-semibold rounded-lg"
+        color="[#2563eb]"
+        class="px-6 py-3 !bg-blue-600 hover:!bg-blue-700 text-white font-semibold rounded-lg"
         elevation="2"
         append-icon="mdi-arrow-right"
       >
@@ -107,6 +107,7 @@ const cards = [
       </v-btn>
 
       <v-btn
+        size="large"
         to="/flowkyai"
         variant="outlined"
         color="primary"
@@ -202,9 +203,11 @@ const cards = [
 
         <!-- Button -->
         <v-btn
-          :to="card.type === 'page' 
-        ? { path: `${card.link}` } 
-        : { path: '/coreservices', hash: `#${card.link}` }"
+          :to="
+            card.type === 'page'
+              ? { path: `${card.link}` }
+              : { path: '/coreservices', hash: `#${card.link}` }
+          "
           variant="outlined"
           class="!text-black font-medium transition-all duration-300 group-hover:!text-white group-hover:bg-blue-600 group-hover:border-blue-600"
           append-icon="mdi-arrow-right"
@@ -251,7 +254,7 @@ const cards = [
         </ul>
 
         <!-- Button -->
-        <v-btn to="/flowkyai" class="text-blue-700 font-semibold" elevation="0">
+        <v-btn to="/flowkyai" class="!text-blue-700 font-semibold" elevation="0">
           Explore FlowkyAI
           <v-icon icon="mdi-arrow-right" class="ml-2" />
         </v-btn>

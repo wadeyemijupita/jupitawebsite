@@ -1,9 +1,6 @@
 <script setup>
-
 import HeaderView from '@/components/HeaderView.vue'
 import FooterView from '@/components/FooterView.vue'
-
-
 
 const cards = [
   {
@@ -64,78 +61,71 @@ const integrationCards = [
     title: 'PDF Upload',
     description: 'Manual statement upload and processing'
   }
-];
-
-
+]
 </script>
 
 <template>
   <HeaderView />
-  <section class="bg-gradient-to-br from-[#eef3ff] to-[#f4f7ff] py-16">
-    <v-container>
-      <div class="grid md:grid-cols-2 items-center gap-12">
-        <!-- Left Text -->
-        <div>
-          <v-btn
-            color="blue-lighten-5"
-            class="rounded-full text-xs font-medium px-4 py-1 mb-4"
-            variant="tonal"
-          >
-            Bank Statement Analysis
+  <section
+    class="bg-gradient-to-br from-[#eef3ff] to-[#f4f7ff] py-16"
+  >
+    <div class="max-w-5xl flex mx-auto justify-center grid md:grid-cols-2 items-center gap-12">
+      <!-- Left Text -->
+      <div>
+        <v-btn
+          color="blue-lighten-5"
+          class="rounded-full text-xs font-medium px-4 py-1 mb-4"
+          variant="tonal"
+        >
+          Bank Statement Analysis
+        </v-btn>
+
+        <h2 class="text-4xl font-bold leading-tight">
+          Extract <span class="text-blue-600">500+</span> <br />
+          Data Points
+        </h2>
+
+        <p class="text-gray-600 mt-4 max-w-lg">
+          Analyze statements uploaded as PDFs or directly through Mono and MBS integrations.
+          Advanced fraud detection with comprehensive insights into spend patterns, income analysis,
+          and cash flow assessment.
+        </p>
+
+        <div class="flex items-center gap-4 mt-8">
+          <v-btn to="/contact" color="primary" class="px-6 text-white custom-btn" size="large" append-icon="mdi-arrow-right">
+            Request Demo
           </v-btn>
-
-          <h2 class="text-4xl font-bold leading-tight">
-            Extract <span class="text-blue-600">500+</span> <br />
-            Data Points
-          </h2>
-
-          <p class="text-gray-600 mt-4 max-w-lg">
-            Analyze statements uploaded as PDFs or directly through Mono and MBS integrations.
-            Advanced fraud detection with comprehensive insights into spend patterns, income
-            analysis, and cash flow assessment.
-          </p>
-
-          <div class="flex items-center gap-4 mt-8">
-            <v-btn
-              color="primary"
-              class="px-6 text-white"
-              size="large"
-              append-icon="mdi-arrow-right"
-            >
-              Request Demo
-            </v-btn>
-            <v-btn variant="outlined" color="primary" class="px-6" size="large"> Learn More </v-btn>
-          </div>
+          <v-btn to="/contact" variant="outlined" color="primary" class="px-6" size="large"> Learn More </v-btn>
         </div>
+      </div>
 
-        <!-- Right Icons -->
-        <div class="flex justify-center">
-          <div class="relative inline-block">
-            <!-- Main square -->
-            <div
-              class="bg-[#e5efff] rounded-xl flex items-center justify-center"
-              style="width: 160px; height: 160px"
-            >
-              <v-icon size="64" color="blue">mdi-file-document-outline</v-icon>
-            </div>
+      <!-- Right Icons -->
+      <div class="flex justify-center">
+        <div class="relative inline-block">
+          <!-- Main square -->
+          <div
+            class="bg-[#e5efff] rounded-xl flex items-center justify-center"
+            style="width: 250px; height: 250px"
+          >
+            <v-icon size="92" color="blue">mdi-file-document-outline</v-icon>
+          </div>
 
-            <!-- Top-right floating icon -->
-            <div
-              class="absolute top-0 right-0 bg-green-100 rounded-lg p-2 shadow-sm flex items-center justify-center"
-            >
-              <v-icon size="20" color="green">mdi-check</v-icon>
-            </div>
+          <!-- Top-right floating icon -->
+          <div
+            class="absolute top-0 right-0 bg-green-100 rounded-lg p-2 shadow-sm flex items-center justify-center"
+          >
+            <v-icon size="40" color="green">mdi-check</v-icon>
+          </div>
 
-            <!-- Bottom-left floating icon -->
-            <div
-              class="absolute bottom-0 left-0 bg-yellow-100 rounded-lg p-2 shadow-sm flex items-center justify-center"
-            >
-              <v-icon size="20" color="amber">mdi-trending-up</v-icon>
-            </div>
+          <!-- Bottom-left floating icon -->
+          <div
+            class="absolute bottom-0 left-0 bg-yellow-100 rounded-lg p-2 shadow-sm flex items-center justify-center"
+          >
+            <v-icon size="40" color="amber">mdi-trending-up</v-icon>
           </div>
         </div>
       </div>
-    </v-container>
+    </div>
   </section>
 
   <section class="py-16 bg-white">
@@ -229,11 +219,10 @@ const integrationCards = [
   </section>
 
   <section class="py-16 bg-white mx-auto">
-    <h2 class="text-3xl font-bold mb-2 text-center">
-      Flexible Integration Options
-    </h2>
+    <h2 class="text-3xl font-bold mb-2 text-center">Flexible Integration Options</h2>
     <p class="text-gray-500 max-w-2xl mx-auto mb-12 text-center">
-      Multiple ways to access and analyze bank statement data, from direct integrations to manual uploads.
+      Multiple ways to access and analyze bank statement data, from direct integrations to manual
+      uploads.
     </p>
 
     <div class="max-w-7xl mx-auto px-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -267,6 +256,9 @@ const integrationCards = [
 
 <style>
 .v-btn {
+  text-transform: none;
+}
+.custom-btn{
   text-transform: none;
 }
 </style>
