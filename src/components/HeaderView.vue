@@ -11,12 +11,19 @@
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center space-x-8 text-gray-700 font-medium">
       <router-link to="/">
-        <a href="#" class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue">Home</a>
+        <a
+          href="#"
+          class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue"
+          >Home</a
+        >
       </router-link>
 
       <!-- Services Dropdown -->
       <div class="relative" ref="dropdownRef">
-        <button @click="toggleDropdown" class="px-4 py-2 hover:bg-blue-50 hover:py-2 hover:px-4 flex items-center hover:text-blue-600 hover:rounded">
+        <button
+          @click="toggleDropdown"
+          class="px-4 py-2 hover:bg-blue-50 hover:py-2 hover:px-4 flex items-center hover:text-blue-600 hover:rounded"
+        >
           Services
           <svg
             class="w-4 h-4 ml-1 transition-transform duration-200"
@@ -48,10 +55,18 @@
       </div>
 
       <router-link to="/flowkyai">
-        <a href="#" class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue">FlowkyAI</a>
+        <a
+          href="#"
+          class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue"
+          >FlowkyAI</a
+        >
       </router-link>
       <router-link to="/contact">
-        <a href="#" class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue">Contact</a>
+        <a
+          href="#"
+          class="px-4 py-2 hover:text-blue-600 hover:bg-blue-50 hover:pt-2 hover:pl-4 hover:pr-4 hover:pb-2 hover:rounded hover:text-blue"
+          >Contact</a
+        >
       </router-link>
     </nav>
 
@@ -61,7 +76,7 @@
       size="large"
       color="[#2563eb]"
       rounded="lg"
-     class="!hidden lg:!inline-flex !bg-blue-600 hover:!bg-blue-700 text-white px-6"
+      class="!hidden lg:!inline-flex !bg-blue-600 hover:!bg-blue-700 text-white px-6"
     >
       Request Demo
     </v-btn>
@@ -97,18 +112,18 @@
       class="absolute top-full left-0 w-full bg-white border-t shadow-md lg:hidden z-50"
     >
       <nav class="flex flex-col space-y-4 p-4 text-gray-700 font-medium">
-        <a href="#" class="hover:text-blue-600">Home</a>
+        <router-link to="/" class="hover:text-blue-600" @click="showMenu = false">Home</router-link>
 
         <!-- Mobile Services Dropdown -->
         <div>
           <button
-            @click="toggleDropdown"
+            @click="showMobileDropdown = !showMobileDropdown"
             class="flex justify-between items-center w-full hover:text-blue-600"
           >
             Services
             <svg
               class="w-4 h-4 ml-1 transition-transform duration-200"
-              :class="{ 'rotate-180': showDropdown }"
+              :class="{ 'rotate-180': showMobileDropdown }"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
@@ -118,13 +133,13 @@
             </svg>
           </button>
 
-          <div v-if="showDropdown" class="mt-2 space-y-2 pl-4">
+          <div v-if="showMobileDropdown" class="mt-2 space-y-2 pl-4">
             <div
               v-for="(service, index) in services"
               :key="index"
               class="p-3 rounded-md hover:bg-blue-100 cursor-pointer transition"
             >
-              <router-link :to="service.path" class="block">
+              <router-link :to="service.path" class="block" @click="showMenu = false">
                 <p class="font-semibold text-gray-800">{{ service.title }}</p>
                 <p class="text-sm text-gray-500">{{ service.description }}</p>
               </router-link>
@@ -132,14 +147,19 @@
           </div>
         </div>
 
-        <a href="#" class="hover:text-blue-600">FlowkyAI</a>
-        <a href="#" class="hover:text-blue-600">Contact</a>
+        <router-link to="/flowkyai" class="hover:text-blue-600" @click="showMenu = false"
+          >FlowkyAI</router-link
+        >
+        <router-link to="/contact" class="hover:text-blue-600" @click="showMenu = false"
+          >Contact</router-link
+        >
 
         <v-btn
           size="large"
           color="primary"
           rounded="lg"
           class="!bg-blue-600 hover:!bg-blue-700 text-white px-6"
+          @click="showMenu = false"
         >
           Request Demo
         </v-btn>
@@ -153,6 +173,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const showDropdown = ref(false)
+const showMobileDropdown = ref(false)
 const showMenu = ref(false)
 
 const services = [

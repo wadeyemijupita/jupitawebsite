@@ -13,13 +13,13 @@ const form = reactive({
   additional: ''
 })
 
-const services = ['Loan Origination', 'Risk Assessment', 'Collections', 'Customer Management']
+const services = ['Loan Origination', 'Bank Statement Analysis', 'Credit Search', 'ID Verification', 'Flowky AI', 'All Services']
 
 const loanVolumes = [
-  'Micro Loans (Less than $50k)',
-  'Small business $50k - $500k',
-  'Commercial $500k - $5M',
-  'Enterprise >$5M'
+  'Less than $1000k',
+  '$1000k - $5000k',
+  '5000k - $50000',
+  '$50000 and above'
 ]
 
 const submitForm = () => {

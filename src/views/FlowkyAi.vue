@@ -92,33 +92,39 @@ const lendingScenarios = [
 
 <template>
   <HeaderView />
-  <section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
-    <div class="max-w-5xl mx-auto px-8 grid md:grid-cols-[60%_40%] gap-8 items-center">
+  <section class="bg-gradient-to-br from-[#2E2BCF] via-[#2D45E0] to-[#5A1FAE] text-white py-24">
+    <div
+      class="max-w-6xl mx-auto px-8 grid md:grid-cols-[60%_40%] gap-12 items-center min-h-[70vh]"
+    >
       <!-- Left Content -->
       <div>
         <span
-          class="px-3 py-1 bg-blue-500 bg-opacity-20 text-xs rounded-full border border-blue-300 mb-4 inline-block"
+          class="px-4 py-1.5 bg-blue-500 bg-opacity-20 text-sm rounded-full border border-blue-300 mb-6 inline-block"
         >
           AI Powered Lending-Engine
         </span>
 
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
           Meet FlowkyAI: Your Intelligent Loan Engine
         </h1>
 
-        <p class="text-blue-100 mb-6 max-w-prose">
+        <p class="text-blue-100 mb-8 max-w-prose text-lg">
           Every lender has unique criteria. FlowkyAI adapts to your specific requirements, whether
           you're serving micro-loans or large commercial lending.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+        <div class="flex flex-col sm:flex-row gap-6 mb-16">
           <!-- Button -->
-          <v-btn size="large" class="!text-blue-700 font-semibold">
-            Explore FlowkyAI
+          <v-btn
+            to="/contact"
+            size="x-large"
+            class="!text-blue-700 font-semibold !bg-white hover:!bg-blue-50"
+          >
+            Request Demo
             <v-icon icon="mdi-arrow-right" class="ml-2" />
           </v-btn>
           <!-- Button -->
-          <v-btn size="large" class="!text-blue-700 font-semibold">
+          <v-btn href="#results" size="x-large" class="!text-blue-700 font-semibold !bg-white hover:!bg-blue-50">
             Learn More
             <v-icon icon="mdi-arrow-right" class="ml-2" />
           </v-btn>
@@ -129,23 +135,33 @@ const lendingScenarios = [
       <div class="relative flex items-center justify-center">
         <!-- Pulsating Animation -->
         <div
-          class="absolute w-48 h-48 rounded-full bg-blue-500 opacity-30 animate-pulse-slow"
+          class="absolute w-56 h-56 rounded-full bg-blue-500 opacity-30 animate-pulse-slow"
         ></div>
         <div
-          class="absolute w-64 h-64 rounded-full bg-blue-400 opacity-20 animate-pulse-slower"
+          class="absolute w-80 h-80 rounded-full bg-blue-400 opacity-20 animate-pulse-slower"
         ></div>
 
         <!-- Brain Icon -->
-        <div class="relative bg-blue-600 rounded-full p-10">
-          <v-icon icon="mdi-brain" size="96" color="white" />
+        <div class="relative bg-blue-600 rounded-full p-14">
+          <v-icon icon="mdi-brain" size="120" color="white" />
+        </div>
+
+        <div
+          class="absolute left-0 -top-2 transform -translate-y-1/2 bg-purple-500 rounded-full p-3 shadow-lg animate-bounce-slow"
+        >
+          <v-icon icon="mdi-shield-outline" size="32" color="purple" />
         </div>
 
         <!-- Floating Icons -->
-        <div class="absolute -top-3 right-2 bg-yellow-400 text-black rounded-full p-3 shadow-lg">
-          <v-icon icon="mdi-flash" size="28" />
+        <div
+          class="absolute -top-4 right-4 bg-yellow-400 text-black rounded-full p-4 shadow-lg animate-pulse-bright"
+        >
+          <v-icon icon="mdi-flash" size="32" />
         </div>
-        <div class="absolute bottom-2 -left-3 bg-green-400 text-black rounded-full p-3 shadow-lg">
-          <v-icon icon="mdi-trending-up" size="28" />
+        <div
+          class="absolute bottom-4 -left-4 bg-green-400 text-black rounded-full p-4 shadow-lg animate-pulse-bright"
+        >
+          <v-icon icon="mdi-trending-up" size="32" />
         </div>
       </div>
     </div>
@@ -264,6 +280,77 @@ const lendingScenarios = [
       </div>
     </div>
   </section>
+
+  <section id="results" class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <!-- Heading -->
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">How FlowkyAI Works</h2>
+      <p class="text-blue-100 max-w-2xl mx-auto mb-12">
+        Our intelligent loan engine integrates seamlessly with your existing systems to provide
+        instant, accurate credit decisions.
+      </p>
+
+      <!-- Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 text-lg font-bold mb-4"
+          >
+            1
+          </div>
+          <h3 class="font-semibold mb-2">Data Collection</h3>
+          <p class="text-blue-100 text-sm">
+            Gather applicant data from multiple sources including bank statements, credit reports,
+            and alternative data
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 text-lg font-bold mb-4"
+          >
+            2
+          </div>
+          <h3 class="font-semibold mb-2">AI Analysis</h3>
+          <p class="text-blue-100 text-sm">
+            Advanced algorithms analyze patterns, risk factors, and creditworthiness using your
+            custom models
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 text-lg font-bold mb-4"
+          >
+            3
+          </div>
+          <h3 class="font-semibold mb-2">Smart Scoring</h3>
+          <p class="text-blue-100 text-sm">
+            Generate precise risk scores and recommendations based on your specific criteria and
+            market conditions
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 text-lg font-bold mb-4"
+          >
+            4
+          </div>
+          <h3 class="font-semibold mb-2">Instant Decision</h3>
+          <p class="text-blue-100 text-sm">
+            Deliver fast, accurate credit decisions with detailed explanations and supporting
+            documentation
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <FooterView />
 </template>
 
@@ -302,5 +389,32 @@ const lendingScenarios = [
 }
 .v-btn {
   text-transform: none;
+}
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+@keyframes pulse-bright {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+.animate-pulse-bright {
+  animation: pulse-bright 2s infinite;
 }
 </style>

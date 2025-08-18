@@ -94,7 +94,7 @@ const cards = [
     </p>
 
     <!-- Buttons -->
-    <div class="flex justify-center gap-4">
+    <div class="max-w-md mx-auto flex flex-col sm:flex-row justify-center gap-4 px-4">
       <v-btn
         size="large"
         to="/contact"
@@ -165,6 +165,7 @@ const cards = [
     <p class="text-gray-500 max-w-xl mx-auto mb-12">
       Everything you need to modernize your lending operations, from origination to decision-making.
     </p>
+
     <div class="max-w-7xl mx-auto px-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <div
         v-for="(card, i) in cards"
@@ -218,7 +219,7 @@ const cards = [
     </div>
   </section>
 
-  <section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+  <section class="bg-gradient-to-br from-[#2E2BCF] via-[#2D45E0] to-[#5A1FAE] text-white py-16">
     <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-[60%_40%] gap-8 items-center">
       <!-- Left Content -->
       <div>
@@ -275,11 +276,20 @@ const cards = [
           <v-icon icon="mdi-brain" size="96" color="white" />
         </div>
 
+        <div
+          class="absolute left-0 -top-2 transform -translate-y-1/2 bg-purple-500 rounded-full p-3 shadow-lg animate-bounce-slow"
+        >
+          <v-icon icon="mdi-shield-outline" size="32" color="purple" />
+        </div>
         <!-- Floating Icons -->
-        <div class="absolute -top-3 right-2 bg-yellow-400 text-black rounded-full p-3 shadow-lg">
+        <div
+          class="absolute -top-3 right-2 bg-yellow-400 text-black rounded-full p-3 shadow-lg animate-pulse-bright"
+        >
           <v-icon icon="mdi-flash" size="28" />
         </div>
-        <div class="absolute bottom-2 -left-3 bg-green-400 text-black rounded-full p-3 shadow-lg">
+        <div
+          class="absolute bottom-2 -left-3 bg-green-400 text-black rounded-full p-3 shadow-lg animate-pulse-bright"
+        >
           <v-icon icon="mdi-trending-up" size="28" />
         </div>
       </div>
@@ -377,5 +387,32 @@ const cards = [
 }
 .v-btn {
   text-transform: none;
+}
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+@keyframes pulse-bright {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+.animate-pulse-bright {
+  animation: pulse-bright 2s infinite;
 }
 </style>
