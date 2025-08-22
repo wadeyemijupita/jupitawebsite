@@ -162,7 +162,7 @@ const cards = [
 
   <section class="py-16 bg-gray-50 mx-auto">
     <h2 class="text-3xl font-bold mb-2 text-center">Comprehensive Lending Solutions</h2>
-    <p class="text-gray-500 max-w-xl mx-auto mb-12">
+    <p class="text-gray-500 max-w-md mx-auto mb-12">
       Everything you need to modernize your lending operations, from origination to decision-making.
     </p>
 

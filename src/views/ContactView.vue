@@ -1,30 +1,57 @@
 <script setup>
-import { reactive } from 'vue'
+import { ref } from 'vue'
 import HeaderView from '@/components/HeaderView.vue'
 import FooterView from '@/components/FooterView.vue'
+import axios from 'axios'
+import { useRouter } from 'vue-router'
 
-const form = reactive({
-  company: '',
-  contact: '',
-  email: '',
-  phone: '',
-  primaryInterest: '',
-  loanVolume: '',
-  additional: ''
+const router = useRouter()
+const demoForm = ref(null)
+const valid = ref(false)
+const loading = ref(false)
+
+const form = ref({
+  company_name: '',
+  company_person: '',
+  email_address: '',
+  phone_number: '',
+  primary_interest: '',
+  loan_volume: '',
+  additional_requirements: ''
 })
 
-const services = ['Loan Origination', 'Bank Statement Analysis', 'Credit Search', 'ID Verification', 'Flowky AI', 'All Services']
+const rules = {
+  required: (v) => !!v || 'This field is required',
+  email: (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid'
+}
 
-const loanVolumes = [
-  'Less than $1000k',
-  '$1000k - $5000k',
-  '5000k - $50000',
-  '$50000 and above'
+const submitForm = async () => {
+  const isValid = await demoForm.value.validate()
+  if (!isValid.valid) return
+
+  loading.value = true
+  try {
+    await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/make-demo-request`, form.value)
+    router.push('/demo-success')
+  } catch (error) {
+    console.error(error)
+    alert('Failed to schedule demo, please try again.')
+  } finally {
+    loading.value = false
+  }
+}
+
+const services = [
+  'Loan Origination',
+  'Bank Statement Analysis',
+  'Credit Search',
+  'ID Verification',
+  'Flowky AI',
+  'All Services'
 ]
 
-const submitForm = () => {
-  console.log('Form submitted:', form)
-}
+const loanVolumes = ['Less than 1000k', '1000k - 5000k', '5000k - 50000', '50000 and above']
+
 </script>
 
 <template>
@@ -55,79 +82,90 @@ const submitForm = () => {
           demonstration.
         </p>
 
-        <form @submit.prevent="submitForm" class="space-y-4">
+        <v-form v-model="valid" @submit.prevent="submitForm" ref="demoForm" class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <v-text-field
-              v-model="form.company"
-              label="Company Name"
+              v-model="form.company_name"
+              :rules="[rules.required]"
+              label="Company Name *"
               variant="outlined"
               density="comfortable"
-              hide-details
+              hide-details="auto"
+              required
             ></v-text-field>
 
             <v-text-field
-              v-model="form.contact"
+              v-model="form.company_person"
+              :rules="[rules.required]"
               label="Contact Person *"
               variant="outlined"
               density="comfortable"
-              hide-details
+              hide-details="auto"
               required
             ></v-text-field>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <v-text-field
-              v-model="form.email"
+              v-model="form.email_address"
+              :rules="[rules.required, rules.email]"
               label="Email Address *"
               type="email"
               variant="outlined"
               density="comfortable"
-              hide-details
+              hide-details="auto"
               required
             ></v-text-field>
 
             <v-text-field
-              v-model="form.phone"
+              v-model="form.phone_number"
               label="Phone Number"
               variant="outlined"
               density="comfortable"
-              hide-details
+              hide-details="auto"
             ></v-text-field>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <v-select
-              v-model="form.primaryInterest"
+              v-model="form.primary_interest"
               :items="services"
+              :rules="[rules.required]"
               label="Primary Interest *"
               variant="outlined"
               density="comfortable"
-              hide-details
+              hide-details="auto"
               required
             ></v-select>
 
             <v-select
-              v-model="form.loanVolume"
+              v-model="form.loan_volume"
               :items="loanVolumes"
               label="Loan Volume"
               variant="outlined"
               density="comfortable"
-              hide-details
+              hide-details="auto"
             ></v-select>
           </div>
 
           <v-textarea
-            v-model="form.additional"
+            v-model="form.additional_requirements"
             label="Additional Requirements"
             variant="outlined"
             density="comfortable"
-            hide-details
+            hide-details="auto"
           ></v-textarea>
 
-          <v-btn type="submit"  color="[#2563eb]" size="large" class="w-full !bg-blue-600 hover:!bg-blue-700 text-white px-6 font-medium">
+          <v-btn
+            type="submit"
+            :loading="loading"
+            :disabled="!valid || loading"
+            size="large"
+            class="w-full !bg-blue-600 hover:!bg-blue-700 text-white px-6 font-medium"
+          >
             Schedule Demo →
           </v-btn>
-        </form>
+        </v-form>
       </div>
 
       <!-- Sidebar -->

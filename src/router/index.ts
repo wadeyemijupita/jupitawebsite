@@ -1,6 +1,7 @@
 import BankStatementAnalysis from '@/views/BankStatementAnalysis.vue'
 import ContactView from '@/views/ContactView.vue'
 import CoreServices from '@/views/CoreServices.vue'
+import DemoSuccess from '@/views/DemoSuccess.vue'
 import FlowkyAi from '@/views/FlowkyAi.vue'
 import HomeView from '@/views/HomeView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -32,7 +33,13 @@ const router = createRouter({
       path: '/coreservices',
       name: 'coreservices',
       component: CoreServices
+    },
+    {
+      path: '/demo-success',
+      name: 'demosuccess',
+      component: DemoSuccess
     }
+    
   ],
 
   scrollBehavior(to, from, savedPosition) {
