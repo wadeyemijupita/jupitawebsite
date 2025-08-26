@@ -83,7 +83,7 @@ const sections = [
         <li>Opt-out of marketing communications</li>
         <li>Receive your data in a portable format</li>
       </ul>
-      <p>Contact: <a href="mailto:support@getjupita.com" class="text-pink-400">support@getjupita.com</a></p>
+      <p>Contact: <a href="mailto:support@getjupita.com" class="text-blue-400">support@getjupita.com</a></p>
     `
   },
   {
