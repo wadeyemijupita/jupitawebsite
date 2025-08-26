@@ -4,6 +4,7 @@ import CoreServices from '@/views/CoreServices.vue'
 import DemoSuccess from '@/views/DemoSuccess.vue'
 import FlowkyAi from '@/views/FlowkyAi.vue'
 import HomeView from '@/views/HomeView.vue'
+import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -38,7 +39,14 @@ const router = createRouter({
       path: '/demo-success',
       name: 'demosuccess',
       component: DemoSuccess
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: PrivacyPolicy
     }
+    
+    
     
   ],
 

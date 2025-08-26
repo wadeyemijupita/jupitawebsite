@@ -119,6 +119,9 @@
             <router-link :to="{ path: '/contact' }" class="hover:text-white transition">
               <li>Contact Us</li>
             </router-link>
+            <router-link :to="{ path: '/privacy-policy' }" class="hover:text-white transition">
+              <li>Privacy Policy</li>
+            </router-link>
           </ul>
         </div>
       </div>
