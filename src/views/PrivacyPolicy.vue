@@ -95,7 +95,7 @@ const sections = [
   {
     title: 'Contact Us',
     content: `
-      <p>If you have questions about this Privacy Policy or our data practices, please contact us at <a href="mailto:privacy@getjupita.com" class="text-pink-400">privacy@getjupita.com</a></p>
+      <p>If you have questions about this Privacy Policy or our data practices, please contact us at <a href="mailto:privacy@getjupita.com" class="text-blue-400">privacy@getjupita.com</a></p>
     `
   }
 ]
@@ -106,7 +106,7 @@ const sections = [
 
   <div class="min-h-screen bg-gray-100 p-8">
     <!-- Header -->
-    <h1 class="text-4xl font-bold text-center mb-6 text-blue-500">Privacy Policy</h1>
+    <h1 class="text-4xl font-bold text-center mb-6 text-blued-500">Privacy Policy</h1>
 
     <p class="text-center max-w-3xl mx-auto mb-10 leading-relaxed">
       Pivox Technology Limited (“we,” “our,” or “us”) respects your privacy and is committed to
