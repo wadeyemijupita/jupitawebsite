@@ -79,7 +79,7 @@ var UR=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports);var lwe=UR((Po,Io
         <li>Opt-out of marketing communications</li>
         <li>Receive your data in a portable format</li>
       </ul>
-      <p>Contact: <a href="mailto:support@getjupita.com" class="text-pink-400">support@getjupita.com</a></p>
+      <p>Contact: <a href="mailto:support@getjupita.com" class="text-blue-400">support@getjupita.com</a></p>
     `},{title:"Changes to This Policy",content:`
       <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the new policy on our website and updating the effective date above.</p>
     `},{title:"Contact Us",content:`
