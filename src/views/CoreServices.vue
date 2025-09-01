@@ -16,7 +16,6 @@ onMounted(async () => {
   }
 })
 
-
 const tabs = [
   {
     id: 'loan-origination',
@@ -173,7 +172,7 @@ onBeforeUnmount(() => {
 
 <template>
   <HeaderView />
-  <div class="text-center mb-8 bg-gray-50 py-20">
+  <div class="max-w-5xl text-center mb-8 bg-gray-50 py-20">
     <div
       class="inline-block px-4 py-1 mb-4 bg-blue-100 border border-blue-100 rounded-full shadow-sm text-sm font-medium text-blue-700"
     >
@@ -225,7 +224,7 @@ onBeforeUnmount(() => {
           :key="tab.id"
           :id="tab.id"
           ref="sectionRefs"
-          class="scroll-mt-32"
+          class="scroll-mt-32 sm:mx-6"
         >
           <div class="flex items-center mb-2">
             <v-icon
@@ -285,7 +284,7 @@ onBeforeUnmount(() => {
     </div>
   </section>
 
- <FooterView  :showCta="false"/>
+  <FooterView :showCta="false" />
 </template>
 
 <style scoped>

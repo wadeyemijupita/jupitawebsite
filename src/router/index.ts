@@ -1,6 +1,7 @@
 import BankStatementAnalysis from '@/views/BankStatementAnalysis.vue'
 import ContactView from '@/views/ContactView.vue'
 import CoreServices from '@/views/CoreServices.vue'
+import CreditScore from '@/views/CreditScore.vue'
 import DemoSuccess from '@/views/DemoSuccess.vue'
 import FlowkyAi from '@/views/FlowkyAi.vue'
 import HomeView from '@/views/HomeView.vue'
@@ -44,6 +45,12 @@ const router = createRouter({
       path: '/privacy-policy',
       name: 'privacy-policy',
       component: PrivacyPolicy
+    }
+    ,
+    {
+      path: '/credit-score',
+      name: 'credit-score',
+      component: CreditScore
     }
     
     

@@ -66,12 +66,12 @@ const integrationCards = [
 
 <template>
   <HeaderView />
-  <section
-    class="bg-gradient-to-br from-[#eef3ff] to-[#f4f7ff] py-16"
-  >
-    <div class="max-w-5xl flex mx-auto justify-center grid md:grid-cols-2 items-center gap-12">
+  <section class="bg-gradient-to-br from-[#eef3ff] to-[#f4f7ff] py-16">
+    <div
+      class="max-w-5xl flex mx-auto justify-center grid md:grid-cols-[60%_40%] gap-12 items-center items-center gap-12"
+    >
       <!-- Left Text -->
-      <div>
+      <div class="px-4 md:px-8">
         <v-btn
           color="blue-lighten-5"
           class="rounded-full text-xs font-medium px-4 py-1 mb-4"
@@ -91,11 +91,26 @@ const integrationCards = [
           and cash flow assessment.
         </p>
 
-        <div class="flex items-center gap-4 mt-8">
-          <v-btn to="/contact" color="primary" class="px-6 text-white custom-btn" size="large" append-icon="mdi-arrow-right">
+        <div class="flex flex-col sm:flex-row gap-4 mt-8 mb-16">
+          <v-btn
+            to="/contact"
+            color="primary"
+            class="w-full sm:w-auto px-8 py-4 text-white custom-btn"
+            size="large"
+            append-icon="mdi-arrow-right"
+          >
             Request Demo
           </v-btn>
-          <v-btn to="/contact" variant="outlined" color="primary" class="px-6" size="large"> Learn More </v-btn>
+
+          <v-btn
+            to="/contact"
+            variant="outlined"
+            color="primary"
+            class="w-full sm:w-auto px-8 py-4 custom-btn"
+            size="large"
+          >
+            Learn More
+          </v-btn>
         </div>
       </div>
 
@@ -254,11 +269,11 @@ const integrationCards = [
   <FooterView />
 </template>
 
-<style>
+<style scoped>
 .v-btn {
   text-transform: none;
 }
-.custom-btn{
+.custom-btn {
   text-transform: none;
 }
 </style>
