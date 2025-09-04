@@ -150,35 +150,43 @@
                   <!-- Legend -->
                   <ul class="space-y-2 text-sm text-gray-700">
                     <li>
-                      <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      Excellent (800–1000)
-                    </li>
-                    <li>
                       <span class="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-                      Good (700–799)
+                      Very high risk(750–850)
                     </li>
                     <li>
                       <span class="inline-block w-3 h-3 bg-yellow-400 rounded-full mr-2"></span>
-                      Fair (600–699)
+                      High risk (650–749)
                     </li>
                     <li>
                       <span class="inline-block w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
-                      Poor (500–599)
+                      Medium risk(500–649)
                     </li>
                     <li>
                       <span class="inline-block w-3 h-3 bg-red-500 rounded-full mr-2"></span>
-                      Very Poor (0–499)
+                      Low risk (300–499)
                     </li>
                   </ul>
 
                   <!-- ApexCharts Gauge -->
-                  <div class="flex justify-center">
+                  <div class="relative w-[400px] h-[220px] mx-auto">
+                    <!-- Larger Gauge -->
                     <apexchart
                       type="radialBar"
-                      height="300"
+                      height="400"
                       :options="chartOptions"
                       :series="series"
                     />
+
+                    <!-- Needle overlay -->
+                    <div
+                      class="absolute bottom-[40px] left-1/2 w-1 h-[120px] bg-black origin-bottom"
+                      :style="{ transform: `rotate(${angle}deg)` }"
+                    ></div>
+
+                    <!-- Needle pivot circle -->
+                    <div
+                      class="absolute bottom-[95px] left-1/2 -translate-x-1/2"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -709,56 +717,12 @@ Content-Type: application/json
     </div>
   </section>
 
-  <footer class="bg-[#0b1320] text-white py-10">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-      <!-- Need Help -->
-      <div>
-        <h3 class="text-lg font-semibold text-blue-400">Need Help?</h3>
-        <p class="mt-2 text-sm text-gray-300">
-          Our support team is here to help you integrate successfully.
-        </p>
-        <v-btn
-      
-          outlined
-          small
-          color="white"
-          class="mt-4 rounded-lg text-blue"
-          href="mailto:support@getjupita.com"
-        >
-          <v-icon class="mr-2" left small>mdi-open-in-new</v-icon>
-          Contact Support
-        </v-btn>
-      </div>
-
-      <!-- Resources -->
-      <div>
-        <h3 class="text-lg font-semibold text-blue-400">Resources</h3>
-        <ul class="mt-2 space-y-2 text-sm">
-          <li><a href="#" class="hover:text-blue-300">API Status Page</a></li>
-          <li><a href="#" class="hover:text-blue-300">Rate Limits</a></li>
-          <li><a href="#" class="hover:text-blue-300">Changelog</a></li>
-          <li><a href="#" class="hover:text-blue-300">Community Forum</a></li>
-        </ul>
-      </div>
-
-      <!-- Base URL -->
-      <div>
-        <h3 class="text-lg font-semibold text-blue-400">Base URL</h3>
-        <div class="mt-2 bg-[#111a2e] px-3 py-2 rounded-md text-sm text-blue-300 font-mono">
-          https://staging.getjupita.com/api/v1
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom copyright -->
-    <div class="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
-      © 2025 Credit Scoring API. All rights reserved.
-    </div>
-  </footer>
+  <FooterView />
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import FooterView from '@/components/FooterView.vue'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import apexchart from 'vue3-apexcharts'
 const activeTab = ref('overview')
 
@@ -799,11 +763,17 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const series = [750] // Current sample score
+const series = ref([600]); // your sample score
+const maxScore = 1000;
+
+const angle = computed(() => {
+  const score = series.value[0];
+  return -90 + (score / maxScore) * 180; // 0–1000 mapped to -90° → +90°
+});
 
 const chartOptions = {
   chart: {
-    type: 'radialBar',
+    type: "radialBar",
     sparkline: { enabled: true }
   },
   plotOptions: {
@@ -812,34 +782,48 @@ const chartOptions = {
       endAngle: 90,
       hollow: {
         margin: 0,
-        size: '50%'
+        size: "65%" // slightly larger hollow center
       },
       track: {
-        background: '#e5e7eb',
-        strokeWidth: '100%'
+        background: "#e5e7eb",
+        strokeWidth: "100%"
       },
       dataLabels: {
         name: {
           show: true,
           offsetY: 30,
-          color: '#6b7280',
-          fontSize: '14px',
-          text: 'Sample Credit Score'
+          color: "#6b7280",
+          fontSize: "14px",
+          formatter: () => "Sample Credit Score"
         },
         value: {
           show: true,
-          fontSize: '28px',
+          fontSize: "36px",
           fontWeight: 700,
-          color: '#111827',
-          offsetY: -10
+          offsetY: -10,
+          formatter: (val) => Math.round(val)
         }
       }
     }
   },
-  labels: ['Sample Credit Score'],
-  colors: ['#22c55e'] // Green default, you can make it dynamic
-}
-
+  labels: ["Credit Score"],
+  fill: {
+    type: "gradient",
+    gradient: {
+      type: "horizontal",
+      stops: [0, 25, 50, 75, 100],
+      colorStops: [
+        { offset: 0, color: "#ef4444" },
+        { offset: 25, color: "#f97316" },
+        { offset: 50, color: "#facc15" },
+        { offset: 75, color: "#3b82f6" },
+        { offset: 100, color: "#22c55e" }
+      ]
+    }
+  },
+  stroke: { lineCap: "round" },
+  yaxis: { min: 0, max: maxScore }
+};
 // Mock credit score data (gauge)
 const scoreData = [
   { name: 'Very Poor', value: 100, fill: '#ef4444' }, // red
@@ -851,8 +835,8 @@ const scoreData = [
 </script>
 
 <style scoped>
-.v-btn{
-    text-transform: none;
+.v-btn {
+  text-transform: none;
 }
 .v-tab {
   text-transform: none;
