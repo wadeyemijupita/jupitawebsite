@@ -150,19 +150,19 @@
                   <!-- Legend -->
                   <ul class="space-y-2 text-sm text-gray-700">
                     <li>
-                      <span class="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                      <span class="inline-block w-3 h-3 bg-red-500 rounded-full mr-2"></span>
                       Very high risk(300-499)
                     </li>
                     <li>
-                      <span class="inline-block w-3 h-3 bg-yellow-400 rounded-full mr-2"></span>
+                      <span class="inline-block w-3 h-3 bg-orange-400 rounded-full mr-2"></span>
                       High risk (500–649)
                     </li>
                     <li>
-                      <span class="inline-block w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+                      <span class="inline-block w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
                       Medium risk(650–749)
                     </li>
                     <li>
-                      <span class="inline-block w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                      <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
                       Low risk (750–850)
                     </li>
                   </ul>
@@ -438,13 +438,14 @@ Content-Type: application/json
   "status_code": 200,
   "data": {
     "credit_score": 641,
-    "breakdown": {
-      "payment": 30,
-      "utilization": 90,
-      "history": 70,
-      "mix": 90,
-      "new": 50
-    }
+     "summary": {
+        "performing_accounts": 2,
+        "derogatory_accounts": 0,
+        "written_off_accounts": 0,
+        "closed_accounts": 73,
+        "highest_amount_accessed": 2500000,
+        "loan_balance": 1509200
+      }
   }
 }
 </pre
@@ -591,13 +592,14 @@ Content-Type: application/json
   "status_code": 200,
   "data": {
     "credit_score": 654,
-    "breakdown": {
-      "payment": 100,
-      "utilization": 50,
-      "history": 50,
-      "mix": 20,
-      "new": 50
-    }
+     "summary": {
+        "performing_accounts": 2,
+        "derogatory_accounts": 0,
+        "written_off_accounts": 0,
+        "closed_accounts": 73,
+        "highest_amount_accessed": 2500000,
+        "loan_balance": 1509200
+      }
   }
 }
 
@@ -618,7 +620,9 @@ Content-Type: application/json
             <div class="flex items-center space-x-2 mb-3">
               <v-icon color="green">mdi-file-document-outline</v-icon>
 
-              <h2 class="text-xl font-semibold text-gray-800">Get report, summary and credit score - First central</h2>
+              <h2 class="text-xl font-semibold text-gray-800">
+                Get report, summary and credit score - First central
+              </h2>
             </div>
 
             <!-- Endpoint -->
@@ -746,13 +750,14 @@ Content-Type: application/json
   "status_code": 200,
   "data": {
     "credit_score": 654,
-    "breakdown": {
-      "payment": 100,
-      "utilization": 50,
-      "history": 50,
-      "mix": 20,
-      "new": 50
-    }
+     "summary": {
+        "performing_accounts": 2,
+        "derogatory_accounts": 0,
+        "written_off_accounts": 0,
+        "closed_accounts": 73,
+        "highest_amount_accessed": 2500000,
+        "loan_balance": 1509200
+      }
   }
 }
 
@@ -768,12 +773,14 @@ Content-Type: application/json
           </div>
 
           <!-- Get report, summary and credit score - Credit registry -->
-           <div class="p-6 bg-white rounded shadow mt-6">
+          <div class="p-6 bg-white rounded shadow mt-6">
             <!-- Title -->
             <div class="flex items-center space-x-2 mb-3">
               <v-icon color="blue">mdi-file-document-outline</v-icon>
 
-              <h2 class="text-xl font-semibold text-gray-800">Get report, summary and credit score - Credit registry</h2>
+              <h2 class="text-xl font-semibold text-gray-800">
+                Get report, summary and credit score - Credit registry
+              </h2>
             </div>
 
             <!-- Endpoint -->
@@ -782,7 +789,8 @@ Content-Type: application/json
                 POST
               </span>
               <code class="px-3 py-1 bg-gray-100 rounded-md text-sm text-gray-800">
-               POST https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-history-credit-registry
+                POST
+                https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-history-credit-registry
               </code>
             </div>
 
@@ -931,12 +939,14 @@ Content-Type: application/json
           </div>
 
           <!-- Get multiple reports credit max score -->
-            <div class="p-6 bg-white rounded shadow mt-6">
+          <div class="p-6 bg-white rounded shadow mt-6">
             <!-- Title -->
             <div class="flex items-center space-x-2 mb-3">
               <v-icon color="yellow">mdi-folder</v-icon>
 
-              <h2 class="text-xl font-semibold text-gray-800">Get Summary Report for Multiple Report</h2>
+              <h2 class="text-xl font-semibold text-gray-800">
+                Get Summary Report for Multiple Report
+              </h2>
             </div>
 
             <!-- Endpoint -->
@@ -945,7 +955,8 @@ Content-Type: application/json
                 POST
               </span>
               <code class="px-3 py-1 bg-gray-100 rounded-md text-sm text-gray-800">
-                POST https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-summary-max-score
+                POST
+                https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-summary-max-score
               </code>
             </div>
 
@@ -1094,12 +1105,14 @@ Content-Type: application/json
           </div>
 
           <!-- Get credit history full -->
-            <div class="p-6 bg-white rounded shadow mt-6">
+          <div class="p-6 bg-white rounded shadow mt-6">
             <!-- Title -->
             <div class="flex items-center space-x-2 mb-3">
               <v-icon color="red">mdi-layers-outline</v-icon>
 
-              <h2 class="text-xl font-semibold text-gray-800">Credit History and Summary Generation – Full</h2>
+              <h2 class="text-xl font-semibold text-gray-800">
+                Credit History and Summary Generation – Full
+              </h2>
             </div>
 
             <!-- Endpoint -->
@@ -1108,7 +1121,8 @@ Content-Type: application/json
                 POST
               </span>
               <code class="px-3 py-1 bg-gray-100 rounded-md text-sm text-gray-800">
-                POST https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-history-full
+                POST
+                https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-history-full
               </code>
             </div>
 
