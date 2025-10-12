@@ -659,7 +659,7 @@ Content-Type: application/json
                 <tbody>
                   <!-- Content-Type -->
                   <tr class="border-b">
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Secret _key</td>
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Content-Type</td>
                     <td class="px-4 py-2">
                       <span
                         class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-medium"
@@ -729,8 +729,11 @@ Content-Type: application/json
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
               <pre>
-{
-  "credit_report_json": { /* First Central Credit Bureau JSON */ }
+      {
+  "id_type": "individual",
+  "id_string": "22326182729",
+  "business_name": "business name",
+  "purpose": "purpose goes here"
 }
       </pre
               >
@@ -818,7 +821,7 @@ Content-Type: application/json
                 <tbody>
                   <!-- Content-Type -->
                   <tr class="border-b">
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Secret _key</td>
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Content-Type</td>
                     <td class="px-4 py-2">
                       <span
                         class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-medium"
@@ -862,7 +865,7 @@ Content-Type: application/json
                         Body
                       </span>
                     </td>
-                    <td class="px-4 py-2 text-gray-600">First Central Credit Bureau JSON object</td>
+                    <td class="px-4 py-2 text-gray-600">Credit Registry JSON object</td>
                   </tr>
                 </tbody>
               </table>
@@ -891,6 +894,7 @@ Content-Type: application/json
                 {
   "id_type": "individual",
   "id_string": "22326182729",
+  "business_name": "business name",
   "purpose": "purpose goes here"
 }
 
@@ -984,7 +988,7 @@ Content-Type: application/json
                 <tbody>
                   <!-- Content-Type -->
                   <tr class="border-b">
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Secret _key</td>
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Content-Type</td>
                     <td class="px-4 py-2">
                       <span
                         class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-medium"
@@ -1150,7 +1154,7 @@ Content-Type: application/json
                 <tbody>
                   <!-- Content-Type -->
                   <tr class="border-b">
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Secret _key</td>
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Content-Type</td>
                     <td class="px-4 py-2">
                       <span
                         class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-medium"
@@ -1194,7 +1198,7 @@ Content-Type: application/json
                         Body
                       </span>
                     </td>
-                    <td class="px-4 py-2 text-gray-600">First Central Credit Bureau JSON object</td>
+                    <td class="px-4 py-2 text-gray-600">Credit Bureau JSON object</td>
                   </tr>
                 </tbody>
               </table>
@@ -1223,6 +1227,7 @@ Content-Type: application/json
                 {
   "id_type": "individual",
   "id_string": "22326182729",
+  "business_name": "business name",
   "purpose": "purpose goes here"
 }
 
