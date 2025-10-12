@@ -729,11 +729,10 @@ Content-Type: application/json
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
               <pre>
-      {
-  "id_type": "individual",
-  "id_string": "22326182729",
-  "business_name": "business name",
-  "purpose": "purpose goes here"
+     {
+   "id_type": "individual|business",
+   "id_number": "individuals bvn| business registration number",
+   "purpose": " credit_check purpose"
 }
       </pre
               >
@@ -891,11 +890,10 @@ Content-Type: application/json
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
               <pre>
-                {
-  "id_type": "individual",
-  "id_string": "22326182729",
-  "business_name": "business name",
-  "purpose": "purpose goes here"
+             {
+   "id_type": "individual|business",
+   "id_number": "individuals bvn| business registration number",
+   "purpose": " credit_check purpose"
 }
 
       </pre
@@ -1058,10 +1056,10 @@ Content-Type: application/json
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
               <pre>
-                {
-  "id_type": "individual",
-  "id_string": "22326182729",
-  "purpose": "purpose goes here"
+    {
+   "id_type": "individual|business",
+   "id_number": "individuals bvn| business registration number",
+   "purpose": " credit_check purpose"
 }
 
       </pre
@@ -1224,11 +1222,10 @@ Content-Type: application/json
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
               <pre>
-                {
-  "id_type": "individual",
-  "id_string": "22326182729",
-  "business_name": "business name",
-  "purpose": "purpose goes here"
+        {
+   "id_type": "individual|business",
+   "id_number": "individuals bvn| business registration number",
+   "purpose": " credit_check purpose"
 }
 
       </pre
