@@ -731,7 +731,7 @@ Content-Type: application/json
               <pre>
      {
    "id_type": "individual|business",
-   "id_number": "individuals bvn| business registration number",
+   "id_string": "individuals bvn| business registration number",
    "purpose": " credit_check purpose"
 }
       </pre
@@ -892,7 +892,7 @@ Content-Type: application/json
               <pre>
              {
    "id_type": "individual|business",
-   "id_number": "individuals bvn| business registration number",
+   "id_string": "individuals bvn| business registration number",
    "purpose": " credit_check purpose"
 }
 
@@ -1058,7 +1058,7 @@ Content-Type: application/json
               <pre>
     {
    "id_type": "individual|business",
-   "id_number": "individuals bvn| business registration number",
+   "id_string": "individuals bvn| business registration number",
    "purpose": " credit_check purpose"
 }
 
@@ -1224,7 +1224,7 @@ Content-Type: application/json
               <pre>
         {
    "id_type": "individual|business",
-   "id_number": "individuals bvn| business registration number",
+   "id_string": "individuals bvn| business registration number",
    "purpose": " credit_check purpose"
 }
 
