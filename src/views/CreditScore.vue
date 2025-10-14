@@ -751,8 +751,9 @@ Content-Type: application/json
   "status": "success",
   "status_code": 200,
   "data": {
-    "credit_score": 654,
-     "summary": {
+    "credit_score": {
+      "credit_score": 624,
+      "summary": {
         "performing_accounts": 2,
         "derogatory_accounts": 0,
         "written_off_accounts": 0,
@@ -760,8 +761,11 @@ Content-Type: application/json
         "highest_amount_accessed": 2500000,
         "loan_balance": 1509200
       }
+    },
+    "credit_history": [ ... ]
   }
 }
+
 
       </pre
               >
@@ -1090,7 +1094,6 @@ Content-Type: application/json
         "loan_balance": 1509200
       }
     },
-    "credit_history": [ ... ]
   }
 }
 
