@@ -47,7 +47,7 @@
       </v-tabs>
     </div>
 
-    <div class="flex max-w-6xl justify-center items-start mx-auto">
+    <div class="flex max-w-7xl justify-center items-start mx-auto">
       <!-- Main Content -->
       <main class="flex-1 px-4 sm:px-6 md:px-8 py-6">
         <!-- API Overview Section -->
@@ -105,12 +105,12 @@
               <section id="report-formats" class="bg-white p-4 rounded shadow">
                 <h2 class="text-lg font-semibold mb-4">Supported Report Formats</h2>
 
-                <div class="grid md:grid-cols-2 gap-4">
+                <div class="grid md:grid-cols-3 gap-4">
                   <!-- Card 1 -->
                   <div
                     class="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:shadow transition"
                   >
-                    <h3 class="font-semibold">Credit Registry JSON</h3>
+                    <h5 class="font-semibold">Credit Registry JSON</h5>
                     <span
                       class="inline-block mt-1 mb-2 text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full font-medium"
                     >
@@ -123,14 +123,28 @@
                   <div
                     class="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:shadow transition"
                   >
-                    <h3 class="font-semibold">First Central Credit Bureau JSON</h3>
+                    <h5 class="font-semibold">First Central Credit Bureau JSON</h5>
                     <span
                       class="inline-block mt-1 mb-2 text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full font-medium"
                     >
                       /fcbc
                     </span>
                     <p class="text-sm text-gray-600">
-                      Reports from the First Central Credit Bureau
+                      Reports from the CRC
+                    </p>
+                  </div>
+
+                  <div
+                    class="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:shadow transition"
+                  >
+                    <h5 class="font-semibold">CRC JSON</h5>
+                    <span
+                      class="inline-block mt-1 mb-2 text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full font-medium"
+                    >
+                      /crc
+                    </span>
+                    <p class="text-sm text-gray-600">
+                      Reports from CRC
                     </p>
                   </div>
                 </div>
@@ -274,14 +288,8 @@
           </div>
 
           <!-- Example Request Section -->
-          <div class="bg-white shadow rounded p-6 mt-6">
-            <div class="flex items-center gap-2 mb-4">
-              <VIcon color="primary">mdi-code-json</VIcon>
-              <h2 class="text-lg font-semibold">Example Request Format</h2>
-            </div>
-
-            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+       <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg mt-4 font-mono text-sm">
+  <pre ref="codeBlock1">
 Headers:
   secret_key: your-secret-key
   secret_id: your-secret-id
@@ -290,16 +298,15 @@ Body:
 {
   "credit_report_json": { /* Your JSON report */ }
 }
-      </pre
-              >
-              <button
-                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
-              >
-                <VIcon size="16">mdi-content-copy</VIcon>
-                Copy
-              </button>
-            </div>
-          </div>
+  </pre>
+  <button
+    @click="copyCode($event)"
+    class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1 transition-colors"
+  >
+    <VIcon size="16">mdi-content-copy</VIcon>
+    Copy
+  </button>
+</div>
         </section>
 
         <!-- Endpoints -->
@@ -398,41 +405,41 @@ Body:
             </div>
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
-            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+           <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+  <pre ref="codeBlock1">
 Headers:
 secret_key: your-secret-key
 secret_id: your-secret-id
 Content-Type: application/json
-      </pre
-              >
-              <button
-                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
-              >
-                <VIcon size="16">mdi-content-copy</VIcon>
-                Copy
-              </button>
-            </div>
+  </pre>
+  <button
+    @click="copyCode($event)"
+    class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1 transition-colors"
+  >
+    <VIcon size="16">mdi-content-copy</VIcon>
+    Copy
+  </button>
+</div>
 
-            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
-            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+<h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
+<div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+  <pre ref="codeBlock1">
 {
   "credit_report_json": { /* First Central Credit Bureau JSON */ }
 }
-      </pre
-              >
-              <button
-                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
-              >
-                <VIcon size="16">mdi-content-copy</VIcon>
-                Copy
-              </button>
-            </div>
+  </pre>
+  <button
+    @click="copyCode($event)"
+    class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1 transition-colors"
+  >
+    <VIcon size="16">mdi-content-copy</VIcon>
+    Copy
+  </button>
+</div>
 
-            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
-            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+<h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
+<div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+  <pre ref="codeBlock1">
 {
   "status": "success",
   "status_code": 200,
@@ -448,15 +455,15 @@ Content-Type: application/json
       }
   }
 }
-</pre
-              >
-              <button
-                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
-              >
-                <VIcon size="16">mdi-content-copy</VIcon>
-                Copy
-              </button>
-            </div>
+  </pre>
+  <button
+    @click="copyCode($event)"
+    class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1 transition-colors"
+  >
+    <VIcon size="16">mdi-content-copy</VIcon>
+    Copy
+  </button>
+</div>
           </div>
 
           <!-- First central -->
@@ -553,7 +560,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 Headers:
 secret_key: your-secret-key
 secret_id: your-secret-id
@@ -561,6 +568,7 @@ Content-Type: application/json
       </pre
               >
               <button
+              @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -570,13 +578,14 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 {
   "credit_report_json": { /* First Central Credit Bureau JSON */ }
 }
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -586,7 +595,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 {
   "status": "success",
   "status_code": 200,
@@ -606,6 +615,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -613,6 +623,165 @@ Content-Type: application/json
               </button>
             </div>
           </div>
+
+          <!-- CRC Scoring -->
+            <div class="p-6 bg-white rounded shadow mt-6">
+            <!-- Title -->
+            <div class="flex items-center space-x-2 mb-3">
+              <VIcon color="blue" size="20">mdi-chart-line</VIcon>
+              <h2 class="text-xl font-semibold text-gray-800">CRC Scoring</h2>
+            </div>
+
+            <!-- Endpoint -->
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-semibold">
+                POST
+              </span>
+              <code class="px-3 py-1 bg-gray-100 rounded-md text-sm text-gray-800">
+                https://staging.getjupita.com/api/v1/api/endpoint/credit_score/crc
+              </code>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-600 mb-6">
+              Calculates a credit score from a CRC JSON report.
+            </p>
+
+            <!-- Request Format -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+
+            <div class="overflow-x-auto mb-4">
+              <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-4 py-2 text-left font-medium text-gray-700 border-b">
+                      Component
+                    </th>
+                    <th class="px-4 py-2 text-left font-medium text-gray-700 border-b">Type</th>
+                    <th class="px-4 py-2 text-left font-medium text-gray-700 border-b">
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Content-Type -->
+                  <tr class="border-b">
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Content-Type</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-medium"
+                      >
+                        Header
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">application/json</td>
+                  </tr>
+                  <!-- secret_key -->
+                  <tr class="border-b">
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">secret_key</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-blue-100 text-blue-600 font-medium"
+                      >
+                        Header
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">Your API secret key</td>
+                  </tr>
+                  <!-- secret_id -->
+                  <tr class="border-b">
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">secret_id</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-blue-100 text-blue-600 font-medium"
+                      >
+                        Header
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
+                  </tr>
+                  <!-- credit_report_json -->
+                  <tr>
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
+                      >
+                        Body
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">CRC JSON object</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
+            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+              <pre ref="codeBlock1">
+Headers:
+secret_key: your-secret-key
+secret_id: your-secret-id
+Content-Type: application/json
+      </pre
+              >
+              <button
+               @click="copyCode($event)"
+                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
+              >
+                <VIcon size="16">mdi-content-copy</VIcon>
+                Copy
+              </button>
+            </div>
+
+            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
+            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+              <pre ref="codeBlock1">
+{
+  "credit_report_json": { /* CRC JSON */ }
+}
+      </pre
+              >
+              <button
+               @click="copyCode($event)"
+                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
+              >
+                <VIcon size="16">mdi-content-copy</VIcon>
+                Copy
+              </button>
+            </div>
+
+            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
+            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+              <pre ref="codeBlock1">
+{
+  "status": "success",
+  "status_code": 200,
+  "data": {
+    "credit_score": 654,
+     "summary": {
+        "performing_accounts": 2,
+        "derogatory_accounts": 0,
+        "written_off_accounts": 0,
+        "closed_accounts": 73,
+        "highest_amount_accessed": 2500000,
+        "loan_balance": 1509200
+      }
+  }
+}
+
+      </pre
+              >
+              <button
+               @click="copyCode($event)"
+                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
+              >
+                <VIcon size="16">mdi-content-copy</VIcon>
+                Copy
+              </button>
+            </div>
+          </div>
+
 
           <!-- Get report, summary and credit score - First central -->
           <div class="p-6 bg-white rounded shadow mt-6">
@@ -711,7 +880,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 Headers:
 secret_key: your-secret-key
 secret_id: your-secret-id
@@ -719,6 +888,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -728,7 +898,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
      {
    "id_type": "individual|business",
    "id_string": "individuals bvn| business registration number",
@@ -737,6 +907,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -746,7 +917,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 {
   "status": "success",
   "status_code": 200,
@@ -770,6 +941,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -876,7 +1048,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 Headers:
 secret_key: your-secret-key
 secret_id: your-secret-id
@@ -884,6 +1056,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -893,7 +1066,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
              {
    "id_type": "individual|business",
    "id_string": "individuals bvn| business registration number",
@@ -903,6 +1076,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -912,7 +1086,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 {
   "status": "success",
   "status_code": 200,
@@ -936,6 +1110,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1042,7 +1217,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 Headers:
 secret_key: your-secret-key
 secret_id: your-secret-id
@@ -1050,6 +1225,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1059,7 +1235,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
     {
    "id_type": "individual|business",
    "id_string": "individuals bvn| business registration number",
@@ -1069,6 +1245,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1078,7 +1255,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 {
   "status": "success",
   "status_code": 200,
@@ -1101,6 +1278,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1207,7 +1385,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 Headers:
 secret_key: your-secret-key
 secret_id: your-secret-id
@@ -1215,6 +1393,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1224,7 +1403,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
         {
    "id_type": "individual|business",
    "id_string": "individuals bvn| business registration number",
@@ -1234,6 +1413,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1243,7 +1423,7 @@ Content-Type: application/json
 
             <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
             <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-              <pre>
+              <pre ref="codeBlock1">
 {
   "status": "success",
   "status_code": 200,
@@ -1269,6 +1449,7 @@ Content-Type: application/json
       </pre
               >
               <button
+               @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
@@ -1394,6 +1575,91 @@ const tabs = [
   { id: 'error', label: 'Error Handling' }
 ]
 
+async function copyCode(event) {
+  try {
+    // Find the pre tag that's a sibling of the button's parent
+    const button = event.currentTarget;
+    const codeBlock = button.parentElement.querySelector('pre');
+    
+    if (!codeBlock) {
+      throw new Error('Code block not found');
+    }
+    
+    const text = codeBlock.textContent;
+    await navigator.clipboard.writeText(text);
+    
+    // Store original content
+    const originalHTML = button.innerHTML;
+    
+    // Update button to show "Copied!" with checkmark
+    button.innerHTML = `
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+      </svg>
+      Copied
+    `;
+    button.classList.add('bg-green-600');
+    button.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+    
+    // Reset after 2 seconds
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.classList.remove('bg-green-600');
+      button.classList.add('bg-gray-700', 'hover:bg-gray-600');
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+    
+    // Show error feedback
+    const button = event.currentTarget;
+    const originalHTML = button.innerHTML;
+    button.innerHTML = `
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+      </svg>
+      Failed
+    `;
+    button.classList.add('bg-red-600');
+    button.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+    
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.classList.remove('bg-red-600');
+      button.classList.add('bg-gray-700', 'hover:bg-gray-600');
+    }, 2000);
+  }
+}
+
+// Add this to your Vue component's methods or as a global function
+async function copyToClipboard(text, event) {
+  try {
+    await navigator.clipboard.writeText(text);
+    
+    // Get the button element
+    const button = event.currentTarget;
+    
+    // Store original content
+    const originalHTML = button.innerHTML;
+    
+    // Update button to show "Copied!" with checkmark
+    button.innerHTML = `
+      <VIcon size="16">mdi-check</VIcon>
+      Copied
+    `;
+    button.classList.add('bg-green-600');
+    button.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+    
+    // Reset after 2 seconds
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.classList.remove('bg-green-600');
+      button.classList.add('bg-gray-700', 'hover:bg-gray-600');
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+    // Optionally show error feedback
+  }
+}
 // Scroll to section with offset
 const scrollTo = (id) => {
   const el = document.getElementById(id)
