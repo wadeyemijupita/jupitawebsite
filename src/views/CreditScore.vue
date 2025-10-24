@@ -39,17 +39,18 @@
 
   <section class="bg-gray-50">
     <!-- Mobile Tabs -->
-    <div class="block md:hidden sticky top-0 z-50 bg-white shadow">
+    <!-- <div class="block md:hidden sticky top-0 z-50 bg-white shadow">
       <v-tabs v-model="activeTab" show-arrows align-tabs="start" direction="horizontal">
         <v-tab v-for="tab in tabs" :key="tab.id" :value="tab.id" @click="scrollTo(tab.id)">
           {{ tab.label }}
         </v-tab>
       </v-tabs>
-    </div>
+    </div> -->
 
     <div class="flex max-w-7xl justify-center items-start mx-auto">
       <!-- Main Content -->
-      <main class="flex-1 px-4 sm:px-6 md:px-8 py-6">
+     <main class="flex-1 px-6 sm:px-6 md:px-8 py-6 overflow-x-hidden">
+
         <!-- API Overview Section -->
         <section id="overview">
           <div class="mb-8 bg-white shadow rounded p-6">
@@ -100,7 +101,7 @@
 
           <div class="flex">
             <!-- Main Content -->
-            <main class="flex-1 space-y-8">
+            <main class="flex-1 space-y-8 overflow-x-hidden">
               <!-- Supported Report Formats -->
               <section id="report-formats" class="bg-white p-4 rounded shadow">
                 <h2 class="text-lg font-semibold mb-4">Supported Report Formats</h2>
@@ -208,7 +209,7 @@
 
         <!-- Authentication -->
         <section id="authentication">
-          <div class="p-6 bg-white rounded shadow border mt-8">
+          <div class="p-6 bg-white rounded shadow mt-8">
             <!-- Title -->
             <div class="flex items-center space-x-2 mb-4">
               <VIcon color="blue" size="20">mdi-key-variant</VIcon>
@@ -289,7 +290,7 @@
 
           <!-- Example Request Section -->
        <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg mt-4 font-mono text-sm">
-  <pre ref="codeBlock1">
+  <pre ref="codeBlock1" class="break-all">
 Headers:
   secret_key: your-secret-key
   secret_id: your-secret-id
@@ -423,7 +424,7 @@ Content-Type: application/json
 
 <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
 <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-  <pre ref="codeBlock1">
+  <pre ref="codeBlock1" class="break-all overflow-x-auto">
 {
   "credit_report_json": { /* Credit Registry Bureau JSON */ }
 }
@@ -439,7 +440,7 @@ Content-Type: application/json
 
 <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
 <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
-  <pre ref="codeBlock1">
+  <pre ref="codeBlock1" class="break-all">
 {
   "status": "success",
   "status_code": 200,
@@ -1522,7 +1523,7 @@ Content-Type: application/json
 
           <div class="bg-white rounded shadow mt-6 p-4">
             <h3 class="text-md font-medium text-gray-800 mb-3">Example Response format</h3>
-            <p class="text-gray-600 text-sm">
+            <p class="text-gray-600 text-sm mb-4">
               When an error occurs, the API returns a JSON object with an error message describing
               what went wrong.
             </p>
@@ -1538,6 +1539,8 @@ Content-Type: application/json
           </div>
         </section>
       </main>
+
+
 
       <!-- Sidebar Navigation -->
       <aside class="hidden md:block w-64 mt-6 p-6 bg-white shadow-inner sticky top-0 h-screen">
@@ -1763,6 +1766,24 @@ const scoreData = [
 </script>
 
 <style scoped>
+pre {
+  width: 100%;
+  overflow-x: auto;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+code {
+  width: 100%;
+  overflow-x: auto;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
 .v-btn {
   text-transform: none;
 }
