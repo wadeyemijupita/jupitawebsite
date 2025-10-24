@@ -39,13 +39,13 @@
 
   <section class="bg-gray-50">
     <!-- Mobile Tabs -->
-    <!-- <div class="block md:hidden sticky top-0 z-50 bg-white shadow">
+    <div class="block md:hidden sticky top-0 z-50 bg-white shadow">
       <v-tabs v-model="activeTab" show-arrows align-tabs="start" direction="horizontal">
         <v-tab v-for="tab in tabs" :key="tab.id" :value="tab.id" @click="scrollTo(tab.id)">
           {{ tab.label }}
         </v-tab>
       </v-tabs>
-    </div> -->
+    </div>
 
     <div class="flex max-w-7xl justify-center items-start mx-auto">
       <!-- Main Content -->
