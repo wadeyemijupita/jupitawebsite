@@ -425,7 +425,7 @@ Content-Type: application/json
 <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
   <pre ref="codeBlock1">
 {
-  "credit_report_json": { /* First Central Credit Bureau JSON */ }
+  "credit_report_json": { /* Credit Registry Bureau JSON */ }
 }
   </pre>
   <button
@@ -1440,7 +1440,8 @@ Content-Type: application/json
       }
     },
     "credit_history_credit_registry": { ... },
-    "credit_history_fccb": { ... }
+    "credit_history_fccb": { ... },
+    "credit_history_crc": { ... },
   }
 }
 
