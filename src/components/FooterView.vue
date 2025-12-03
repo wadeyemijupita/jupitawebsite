@@ -60,7 +60,7 @@
         <!-- Logo and description -->
         <div>
           <div class="flex items-center gap-2 mb-3">
-            <img src="../assets/images/white.png" alt="Jupita" class="w-5 h-5" />
+            <img src="../assets/jupita-logo.jpg" alt="Jupita" class="w-15 h-10 rounded" />
             <span class="font-semibold">Jupita</span>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed">

@@ -4,8 +4,8 @@
   >
     <!-- Logo -->
     <div class="flex items-center space-x-2">
-      <img src="../assets/images/white.png" alt="Jupita Logo" class="w-10 h-10" />
-      <span class="font-semibold text-blue-700">Jupita</span>
+      <img src="../assets/jupita-logo.jpg" alt="Jupita Logo" class="w-20 h-25" />
+      <!-- <span class="font-semibold text-blue-700">Jupita</span> -->
     </div>
 
     <!-- Desktop Nav -->
