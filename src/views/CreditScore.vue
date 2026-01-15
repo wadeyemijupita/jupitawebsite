@@ -336,8 +336,8 @@ Body:
               score with detailed performance summary.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border border-gray-200 text-sm rounded-lg overflow-hidden">
@@ -389,18 +389,7 @@ Body:
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">Credit Registry JSON object</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -490,8 +479,8 @@ Content-Type: application/json
               Calculates a credit score from a First Central Bureau JSON report.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
@@ -543,18 +532,7 @@ Content-Type: application/json
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">First Central Credit Bureau JSON object</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -648,8 +626,8 @@ Content-Type: application/json
               Calculates a credit score from a CRC JSON report.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
@@ -701,18 +679,7 @@ Content-Type: application/json
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">CRC JSON object</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -810,8 +777,8 @@ Content-Type: application/json
               Generates a credit history and summary from FCCB data.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
@@ -863,18 +830,7 @@ Content-Type: application/json
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">First Central Credit Bureau JSON object</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -978,8 +934,8 @@ Content-Type: application/json
               Generates a credit history and summary from Credit registry data.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
@@ -1031,18 +987,7 @@ Content-Type: application/json
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">Credit Registry JSON object</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -1147,8 +1092,8 @@ Content-Type: application/json
               Description: Generates a credit summary with a maximum score.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
@@ -1200,18 +1145,7 @@ Content-Type: application/json
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">First Central Credit Bureau JSON object</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -1287,6 +1221,7 @@ Content-Type: application/json
               </button>
             </div>
           </div>
+          
 
           <!-- Get credit history full -->
           <div class="p-6 bg-white rounded shadow mt-6">
@@ -1315,8 +1250,8 @@ Content-Type: application/json
               Generates a full credit history and summary from both Credit Registry and FCCB data.
             </p>
 
-            <!-- Request Format -->
-            <h3 class="text-md font-medium text-gray-800 mb-3">Request Format</h3>
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
 
             <div class="overflow-x-auto mb-4">
               <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
@@ -1368,18 +1303,8 @@ Content-Type: application/json
                     </td>
                     <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
                   </tr>
-                  <!-- credit_report_json -->
-                  <tr>
-                    <td class="px-4 py-2 text-gray-800 bg-gray-100">credit_report_json</td>
-                    <td class="px-4 py-2">
-                      <span
-                        class="px-2 py-1 text-xs rounded-md bg-pink-100 text-pink-600 font-medium"
-                      >
-                        Body
-                      </span>
-                    </td>
-                    <td class="px-4 py-2 text-gray-600">Credit Bureau JSON object</td>
-                  </tr>
+                
+                 
                 </tbody>
               </table>
             </div>
@@ -1452,6 +1377,170 @@ Content-Type: application/json
               >
               <button
                @click="copyCode($event)"
+                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
+              >
+                <VIcon size="16">mdi-content-copy</VIcon>
+                Copy
+              </button>
+            </div>
+          </div>
+
+
+          
+           <!-- Custom Multi report -->
+          <div class="p-6 bg-white rounded shadow mt-6">
+            <!-- Title -->
+            <div class="flex items-center space-x-2 mb-3">
+              <v-icon color="red">mdi-server-outline</v-icon>
+
+              <h2 class="text-xl font-semibold text-gray-800">
+               Credit History and Summary Generation – Custom Multi report
+              </h2>
+            </div>
+
+            <!-- Endpoint -->
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-semibold">
+                POST
+              </span>
+              <code class="px-3 py-1 bg-gray-100 rounded-md text-sm text-gray-800">
+               https://staging.getjupita.com/api/v1/api/endpoint/credit_score/generate-credit-history-multi-report
+              </code>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-600 mb-6">
+              Return credit report for one or more credit bureaus with performance summary and credit score. The report type is set to ["crc", "credit_registry", "fcbc"]
+            </p>
+
+            <!-- Request Header -->
+            <h3 class="text-md font-medium text-gray-800 mb-3">Request Header</h3>
+
+            <div class="overflow-x-auto mb-4">
+              <table class="min-w-full border-1 text-sm rounded-lg overflow-hidden">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-4 py-2 text-left font-medium text-gray-700 border-b">
+                      Component
+                    </th>
+                    <th class="px-4 py-2 text-left font-medium text-gray-700 border-b">Type</th>
+                    <th class="px-4 py-2 text-left font-medium text-gray-700 border-b">
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Content-Type -->
+                  <tr class="border-b">
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">Content-Type</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-green-100 text-green-700 font-medium"
+                      >
+                        Header
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">application/json</td>
+                  </tr>
+                  <!-- secret_key -->
+                  <tr class="border-b">
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">secret_key</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-blue-100 text-blue-600 font-medium"
+                      >
+                        Header
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">Your API secret key</td>
+                  </tr>
+                  <!-- secret_id -->
+                  <tr class="border-b">
+                    <td class="px-4 py-2 text-gray-800 bg-gray-100">secret_id</td>
+                    <td class="px-4 py-2">
+                      <span
+                        class="px-2 py-1 text-xs rounded-md bg-blue-100 text-blue-600 font-medium"
+                      >
+                        Header
+                      </span>
+                    </td>
+                    <td class="px-4 py-2 text-gray-600">Your API secret ID</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Headers</h3>
+            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+              <pre ref="codeBlock1">
+Headers:
+secret_key: your-secret-key
+secret_id: your-secret-id
+Content-Type: application/json
+
+      </pre
+              >
+              <button
+                @click="copyCode($event)"
+                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
+              >
+                <VIcon size="16">mdi-content-copy</VIcon>
+                Copy
+              </button>
+            </div>
+
+            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Request Body</h3>
+            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+              <pre ref="codeBlock1">
+       {
+   "id_type": "individual|business",
+   "id_string": "individuals bvn| business registration number",
+   "purpose": " credit_check purpose",
+ "report_types": ["crc", "credit_registry", "fcbc"]
+}
+
+      </pre
+              >
+              <button
+                @click="copyCode($event)"
+                class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
+              >
+                <VIcon size="16">mdi-content-copy</VIcon>
+                Copy
+              </button>
+            </div>
+
+            <h3 class="text-md font-medium text-gray-800 mt-6 mb-3">Example Response</h3>
+            <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">
+              <pre ref="codeBlock1">
+{
+  "status": "success",
+  "status_code": 200,
+  "data": {
+    "credit_score_main": {
+      "credit_score": 654,
+      "summary": {
+        "performing_accounts": 2,
+        "derogatory_accounts": 0,
+        "written_off_accounts": 0,
+        "closed_accounts": 73,
+        "highest_amount_accessed": 2500000,
+        "loan_balance": 1509200
+      }
+    },
+    "credit_history_credit_registry": { ... },
+    "credit_history_fccb": { ... },
+    "credit_history_crc": { ... },
+  }
+}
+
+
+
+      </pre
+              >
+              <button
+                @click="copyCode($event)"
                 class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded text-xs flex items-center gap-1"
               >
                 <VIcon size="16">mdi-content-copy</VIcon>
