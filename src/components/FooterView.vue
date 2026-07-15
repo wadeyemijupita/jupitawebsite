@@ -128,7 +128,7 @@
 
       <!-- Bottom copyright -->
       <div class="mt-8 border-t border-gray-800 pt-6 text-gray-500 text-xs text-center">
-        © 2025 Jupita Inc. All rights reserved. Advanced lending solutions for modern financial
+        © 2026 Jupita Inc. All rights reserved. Advanced lending solutions for modern financial
         institutions.
       </div>
     </div>
