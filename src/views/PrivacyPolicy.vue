@@ -109,11 +109,10 @@ const sections = [
     <h1 class="text-4xl font-bold text-center mb-6 text-blued-500">Privacy Policy</h1>
 
     <p class="text-center max-w-3xl mx-auto mb-10 leading-relaxed">
-      Pivox Technology Limited (“we,” “our,” or “us”) respects your privacy and is committed to
-      protecting the personal information you share with us through our website, platform, APIs, and
-      services (collectively, the “Services”). This Privacy Policy explains how we collect, use,
-      disclose, and safeguard your information when you visit our website or use our products and
-      services.
+      Jupita Inc (“we,” “our,” or “us”) respects your privacy and is committed to protecting the
+      personal information you share with us through our website, platform, APIs, and services
+      (collectively, the “Services”). This Privacy Policy explains how we collect, use, disclose,
+      and safeguard your information when you visit our website or use our products and services.
     </p>
 
     <!-- Accordion -->
